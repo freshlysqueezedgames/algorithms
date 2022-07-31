@@ -5,7 +5,7 @@ type Comparable interface {
 }
 
 // returns -1 for move a is less than b, 0 for equality / do nothing, 1 for a is more than b
-type Comparitor[K Comparable] func(a K, b K) int
+type Comparitor[K Comparable] func(a, b K) int
 
 func SelectionSort[K Comparable](list []K, comparitor Comparitor[K]) {
 	length := len(list)
