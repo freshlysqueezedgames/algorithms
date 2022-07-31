@@ -14,12 +14,11 @@ func SelectionSort[K Comparable](list []K, comparitor Comparitor[K]) {
 		return
 	}
 
-	lowestIndex := 0
-
-	for i := 0; i < length; i++ {
+	for i := 0; i < length-1; i++ {
 		sorted := true
+		lowestIndex := i
 
-		for j := i; j < length; j++ {
+		for j := i + 1; j < length; j++ {
 			if comparitor(list[j], list[lowestIndex]) == -1 {
 				sorted = false
 				lowestIndex = j
