@@ -19,5 +19,9 @@ func comparitor(a int, b int) int {
 }
 
 func main() {
-	log.Printf("sorted: %v", sorting.SelectionSort([]int{64, 25, 15, 22, 11}, comparitor))
+	test := []int{64, 25, 15, 22, 11}
+
+	sorting.SelectionSort(test, comparitor)
+
+	log.Printf("sorted: %+v", test)
 }
