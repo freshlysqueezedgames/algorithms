@@ -2,8 +2,7 @@ package main
 
 import (
 	"log"
-
-	"github.com/freshlysqueezedgames/algorithms/sorting"
+	"main/sorting"
 )
 
 func comparitor(a int, b int) int {

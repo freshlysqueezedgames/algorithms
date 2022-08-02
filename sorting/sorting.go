@@ -34,3 +34,31 @@ func SelectionSort[K Comparable](list []K, comparitor Comparitor[K]) {
 		list[i] = temp
 	}
 }
+
+func BubbleSort[K Comparable](list []K, comparitor Comparitor[K]) {
+	length := len(list)
+
+	if length == 0 {
+		return
+	}
+
+	for {
+		swapped := false
+
+		for j := 0; j < length-1; j++ {
+			var i int = j + 1
+
+			if comparitor(list[i], list[j]) == -1 {
+				temp := list[j]
+				list[j] = list[i]
+				list[i] = temp
+
+				swapped = true
+			}
+		}
+
+		if !swapped {
+			return
+		}
+	}
+}
